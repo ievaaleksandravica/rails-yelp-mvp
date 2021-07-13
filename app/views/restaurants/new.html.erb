@@ -1,0 +1,14 @@
+<div>Create new restaurant</div>
+
+  <% @categories = %w(chinese italian japanese french belgian) %>
+
+<div>
+  <%= simple_form_for (@restaurant) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :address %>
+  <%= f.input :phone_number %>
+  <%= f.input :category, collection: @categories %>
+
+  <%= f.submit "Create restaurant", class: "btn btn-primary" %>
+<% end %>
+</div>

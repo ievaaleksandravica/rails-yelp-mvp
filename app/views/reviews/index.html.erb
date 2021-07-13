@@ -1,0 +1,7 @@
+<div>check connection</div>
+
+<p>
+<% @reviews.each do |review| %>
+  <p> <%= "Rating: #{review.rating}, Content: #{review.content}" %> </p>
+<% end %>
+</p>
